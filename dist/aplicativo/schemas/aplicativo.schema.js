@@ -4,7 +4,7 @@ exports.LibroSchema = exports.AdministradorSchema = exports.ClienteSchema = void
 const mongoose_1 = require("mongoose");
 exports.ClienteSchema = new mongoose_1.Schema({
     IDcliente: { type: Number, required: true },
-    Contraseña: { type: String, required: true },
+    Password: { type: String, required: true },
     DNI: Number,
     Nombre: String,
     apellido: String,
@@ -28,10 +28,10 @@ exports.LibroSchema = new mongoose_1.Schema({
     Editorial: String,
     Precio: Number,
     Numeropaginas: Number,
-    Fechapublicacion: Date,
+    Fechapublicacion: String,
     ISSN: Number,
     Idioma: String,
-    Añopublicacion: Date,
+    Añopublicacion: Number,
     Estado: { type: String, required: true }
 });
 //# sourceMappingURL=aplicativo.schema.js.map

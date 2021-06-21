@@ -1,6 +1,6 @@
 export declare class ClienteDTO {
     readonly IDcliente: number;
-    readonly Contraseña: string;
+    readonly Password: string;
     readonly DNI: number;
     readonly Nombre: string;
     readonly apellido: string;
@@ -27,9 +27,9 @@ export declare class LibroDTO {
     readonly Editorial: string;
     readonly Precio: string;
     readonly Numeropaginas: number;
-    readonly Fechapublicacion: Date;
+    readonly Fechapublicacion: string;
     readonly ISSN: number;
     readonly Idioma: string;
-    readonly Añopublicacion: Date;
+    readonly Añopublicacion: number;
     readonly Estado: string;
 }

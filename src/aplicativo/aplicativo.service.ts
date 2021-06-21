@@ -20,7 +20,7 @@ export class AplicativoService {
     
 
     async getObtenerclientes(): Promise<Cliente[]> {
-        const clientes = await this.clienteModel.find()
+        const clientes = await this.clienteModel.find();
         return clientes;
 
     }
@@ -33,7 +33,7 @@ export class AplicativoService {
 
     async createCliente(ClienteDTO: ClienteDTO): Promise<Cliente>{
         const createcliente = new this.clienteModel(ClienteDTO);
-        return await createcliente.save()
+        return await createcliente.save();
     }
 
     async updateCliente(IDcliente: string, ClienteDTO: ClienteDTO): Promise<Cliente> {
@@ -43,7 +43,7 @@ export class AplicativoService {
     }
 
     async deleteCliente(IDcliente: string): Promise<Cliente> {
-        const deletecliente = await this.clienteModel.findByIdAndDelete(IDcliente)
+        const deletecliente = await this.clienteModel.findByIdAndDelete(IDcliente);
         return deletecliente;
 
 
@@ -53,11 +53,11 @@ export class AplicativoService {
 
     async createAdministrador(AdministradorDTO: AdministradorDTO): Promise<Administrador> {
         const createadministrador = new this.administradorModel(AdministradorDTO);
-        return await createadministrador.save()
+        return await createadministrador.save();
     }
 
     async deleteAdministrador(IDadmin: number): Promise<Administrador>{
-        const deleteadministrador = await this.administradorModel.findByIdAndDelete(IDadmin)
+        const deleteadministrador = await this.administradorModel.findByIdAndDelete(IDadmin);
         return deleteadministrador;
     }
 
@@ -65,7 +65,7 @@ export class AplicativoService {
 
     async createLibro(LibroDTO: LibroDTO): Promise<Libro>{
         const createlibro = new this.libroModel(LibroDTO);
-        return await createlibro.save()
+        return await createlibro.save();
     }
 
     async updateLibro(Codigolibro: number, libroDTO: LibroDTO): Promise<Libro>{
@@ -79,7 +79,7 @@ export class AplicativoService {
     }  
 
     async getMostrarLibros(): Promise<Libro[]>{
-        const mostrarlibros = await this.libroModel.find()
+        const mostrarlibros = await this.libroModel.find();
         return mostrarlibros;
     }
 }

@@ -112,11 +112,11 @@ export class AplicativoController {
         })
     }
 
-    @Get('/mostrarlibros')
+    @Get('/libro/mostrarlibros')
     async getMostrarLibros(@Res() res) {
         const mostrarlibros = await this.aplicativoservice.getMostrarLibros();
         return res.status(HttpStatus.OK).json({
-            mostrarlibros
+            mostrarlibros: mostrarlibros
         });
             
     }

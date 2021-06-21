@@ -103,7 +103,7 @@ let AplicativoController = class AplicativoController {
     async getMostrarLibros(res) {
         const mostrarlibros = await this.aplicativoservice.getMostrarLibros();
         return res.status(common_1.HttpStatus.OK).json({
-            mostrarlibros
+            mostrarlibros: mostrarlibros
         });
     }
 };
@@ -178,7 +178,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AplicativoController.prototype, "deleteLibro", null);
 __decorate([
-    common_1.Get('/mostrarlibros'),
+    common_1.Get('/libro/mostrarlibros'),
     __param(0, common_1.Res()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),

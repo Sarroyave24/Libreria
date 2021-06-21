@@ -2,7 +2,7 @@ import { Schema } from "mongoose";
 
 export const ClienteSchema = new Schema({
     IDcliente: {type: Number, required: true},
-    Contraseña: {type: String, required: true},
+    Password: {type: String, required: true},
     DNI: Number,
     Nombre: String,
     apellido: String,
@@ -29,9 +29,9 @@ export const LibroSchema = new Schema({
     Editorial: String,
     Precio: Number,
     Numeropaginas: Number,
-    Fechapublicacion: Date,
+    Fechapublicacion: String,
     ISSN: Number,
     Idioma: String,
-    Añopublicacion: Date,
+    Añopublicacion: Number,
     Estado: {type: String, required: true}
 })

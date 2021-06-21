@@ -3,7 +3,7 @@ import { Document } from "mongoose";
 
 export interface Cliente extends Document {
     readonly IDcliente: number;
-    readonly Contraseña: string;
+    readonly Password: string;
     readonly DNI: number;
     readonly Nombre: string;
     readonly apellido: string;
@@ -29,9 +29,9 @@ export class Libro extends Document {
     readonly Editorial: string;
     readonly Precio: number;
     readonly Numeropaginas: number;
-    readonly Fechapublicacion: Date;
+    readonly Fechapublicacion: string;
     readonly ISSN: number;
     readonly Idioma: string;
-    readonly Añopublicacion: Date;
+    readonly Añopublicacion: number;
     readonly Estado: string
 }
